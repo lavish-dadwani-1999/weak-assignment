@@ -29,12 +29,13 @@ axios.post(`${baseurl}/api/user`,{
 // assig 72
 
 var inputsec = document.querySelector(".input-sec")
-
+var demo = document.querySelector("#demo")
 function minisec(event){
     event.preventDefault()
     var sec= event.target.mins.value
     var minesec=ms(sec)
     console.log(minesec)
+    demo.innerHTML=minesec
 }
 
 inputsec.addEventListener("submit",minisec)
