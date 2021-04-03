@@ -30,12 +30,19 @@ axios.post(`${baseurl}/api/user`,{
 
 var inputsec = document.querySelector(".input-sec")
 var demo = document.querySelector("#demo")
+
+
 function minisec(event){
     event.preventDefault()
     var sec= event.target.mins.value
     var minesec=ms(sec)
+    if(minesec===undefined){
+        alert("invalid syntix")
+         
+    }
     console.log(minesec)
-    demo.innerHTML=minesec
+     demo.innerHTML=`${minesec} milliseconds.`
+    
 }
 
 inputsec.addEventListener("submit",minisec)
